@@ -1,6 +1,6 @@
 <div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 4px;">
-  <div class="col-10">
-    <h4 style="color: #cccccc; margin-bottom: 4px;">
+  <div class="col-9">
+    <h4 style="color: #ff6f61; margin-bottom: 4px;">
       {{ job['title'] }}
     </h4>
     <div>
@@ -13,7 +13,28 @@
       </div>
     {% endif %}
   </div>
-  <div class="col-3">
-    <button type="button" class="btn btn-outline-primary">Apply</button>
+  <div class="col-3 d-flex justify-content-end align-items-center">
+    <a href="mailto:hello@jovian.ai?subject=Application%20for%20 {{jobs[title]}} &body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20resume%20link%20%3A%20%3Cresume%20link%3E%0D%0A%0D%0AMy%20LinkedIn%20like%3A%20%3ClinkdIn%20in%3E" class="btn btn-outline-primary apply-button">Apply</a>
   </div>
 </div>
+
+<style>
+  .apply-button {
+    border: 2px solid #ff6f61;
+    color: #ff6f61;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .apply-button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  h4 {
+    color: #ff6f61;
+  }
+</style>
